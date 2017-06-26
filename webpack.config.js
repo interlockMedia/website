@@ -4,7 +4,8 @@ var path = require("path");
 
 module.exports = {
     entry: {
-        index: "./app/javascript/index.js"
+        index: "./app/javascript/index.js",
+        about: "./app/javascript/about.js",
     },
     output: {
         // options related to how webpack emits results
@@ -48,6 +49,7 @@ module.exports = {
                     ]
                 })
             },
+
             {
                 test: /\.html$/,
                 loader: "html-loader"
@@ -57,8 +59,16 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin('[name].bundle.[hash].css'),
         new HtmlWebpackPlugin({
-            template: './app/templates/index.html'
-        })],
+            template: './app/templates/index.html',
+            chunks: ['index']
+        }),
+        new HtmlWebpackPlugin({
+            template: './app/templates/about.html',
+            filename: 'about.html',
+            chunks: ['about']
+        }),
+
+    ],
     devServer: {
         hot: true,
         inline: true
