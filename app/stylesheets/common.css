@@ -1,0 +1,9 @@
+/*initialization of all common values and styles (colors, fonts, sizes and etc)*/
+
+body {
+  font-size: 1rem;
+}
+
+:root {
+  --mainColor: blue;
+}

@@ -1,5 +1,9 @@
+@import './common.css';
+
+/*Test code*/
 .body {
-    h1 {
-        color: #2dff2e;
+    display: flex;
+    &__red {
+        color: var(--mainColor);
     }
 }
