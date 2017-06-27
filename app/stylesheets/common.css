@@ -1,9 +1,32 @@
 /*initialization of all common values and styles (colors, fonts, sizes and etc)*/
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+English+SC');
 
 body {
   font-size: 1rem;
 }
 
 :root {
-  --mainColor: blue;
+  /*variables for background colors*/
+  --themeDarkBlueColor: #10222b;
+  --themeGreenColor: #94aa63;
+  --themeWhiteColor: #f6ffe0;
+  --themeLightBlueColor: #e2f0d6;
+  --themeRedColor: #8a0707;
+
+  /*variables for font colors*/
+  --lightFontColor: #ffffff;
+  --darkFontColor: #10222b;
+
+  /*dimension variables*/
+  --maxSectionWidth: 1365px;
+
+  /*font variables*/
+  --paragraphFont: 'Josefin Sans', sans-serif;
+  --titleFont: 'IM Fell English SC', serif;
+}
+
+.container {
+  max-width: var(--maxSectionWidth);
+  margin: 0 auto;
 }
