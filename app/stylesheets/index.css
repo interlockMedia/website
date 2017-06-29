@@ -13,6 +13,7 @@ header {
     color: var(--lightFontColor);
     font-size: 1rem;
 
+
     &__logo {
       &__img {
         vertical-align: middle;
@@ -30,6 +31,10 @@ header {
     & nav {
       width: 46.1538%;
       padding-right: 40px;
+
+      @media (width < 1220px) {
+        width: 60%;
+      }
     }
 
     &__nav {
