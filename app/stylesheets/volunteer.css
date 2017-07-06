@@ -1,0 +1,57 @@
+@import './common.css';
+
+header {
+    width: 100%;
+    background-color: var(--themeDarkBlueColor);
+    padding:10px;
+
+& .header {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--lightFontColor);
+      font-size: 1rem;
+
+&__logo {
+&__img {
+     vertical-align: middle;
+ }
+& h4 {
+      display: inline-block;
+      vertical-align: middle;
+      font-family: var(--titleFont);
+      font-size: 3.125em; /*50px/16px*/
+      margin: 0;
+      font-weight: 400;
+  }
+}
+
+& nav {
+      width: 46.1538%;
+      padding-right: 40px;
+  }
+
+&__nav {
+     display: flex;
+     max-width: 39.375em; /*630px/16px*/
+     min-width: 350px;
+     flex-flow: row nowrap;
+     justify-content: space-between;
+     align-items: center;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+
+&__item {
+     font-family: var(--paragraphFont);
+     font-size: 1.5625em; /*25px/16px*/;
+
+& a {
+      display: block;
+      padding: 19px;
+  }
+}
+}
+}
+}
