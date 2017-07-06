@@ -1,10 +1,19 @@
 /*initialization of all common values and styles (colors, fonts, sizes and etc)*/
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+/*@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');*/
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400,700');
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+English+SC');
 
 body {
   font-size: 1rem;
 }
+
+/*@font-face {
+  font-family: 'josefin_sansregular';
+  src: url('../assets/fonts/josefinsans-regular-webfont.woff2') format('woff2'),
+  url('../assets/fonts/josefinsans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}*/
 
 :root {
   /*variables for background colors*/
