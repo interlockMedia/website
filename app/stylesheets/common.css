@@ -1,9 +1,41 @@
 /*initialization of all common values and styles (colors, fonts, sizes and etc)*/
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+/*@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');*/
+/*@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400,700');*/
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+English+SC');
 
 body {
   font-size: 1rem;
+}
+
+@font-face {
+  font-family: 'josefin_sansregular';
+  src: url('../assets/fonts/josefinsans-regular-webfont.woff2') format('woff2'),
+  url('../assets/fonts/josefinsans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'josefin_sanslight_italic';
+  src: url('../assets/fonts/josefinsans-lightitalic-webfont.woff2') format('woff2'),
+  url('../assets/fonts/josefinsans-lightitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'josefin_sansbold';
+  src: url('../assets/fonts/josefinsans-bold-webfont.woff2') format('woff2'),
+  url('../assets/fonts/josefinsans-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'josefin_sanslight';
+  src: url('../assets/fonts/JosefinSans-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 :root {
@@ -22,7 +54,11 @@ body {
   --maxSectionWidth: 1365px;
 
   /*font variables*/
-  --paragraphFont: 'Josefin Sans', sans-serif;
+ /* --paragraphFont: 'Josefin Sans', sans-serif;*/
+  --paragraphFont: 'josefin_sansregular', sans-serif;
+  --paragraphFontItalic: 'josefin_sanslight_italic', sans-serif;
+  --paragraphFontBold: 'josefin_sansbold', sans-serif;
+  --paragraphFontLight: 'josefin_sanslight', sans-serif;
   --titleFont: 'IM Fell English SC', serif;
 }
 
