@@ -31,15 +31,12 @@ body {
   font-style: normal;
 }
 
-
 @font-face {
   font-family: 'josefin_sanslight';
   src: url('../assets/fonts/JosefinSans-Light.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-
-
 
 :root {
   /*variables for background colors*/
@@ -48,7 +45,6 @@ body {
   --themeWhiteColor: #f6ffe0;
   --themeLightBlueColor: #e2f0d6;
   --themeRedColor: #8a0707;
-
 
   /*variables for font colors*/
   --lightFontColor: #ffffff;
