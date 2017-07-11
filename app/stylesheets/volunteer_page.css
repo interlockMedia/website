@@ -1,84 +1,130 @@
 @import './common.css';
+
 header {
   width: 100%;
   background-color: var(--themeDarkBlueColor);
-  font-size: 1rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  padding:10px;
 
-  & .header {
+& .header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     color: var(--lightFontColor);
-    padding: 1.8125em; /*29px/16px*/
+    font-size: 1rem;
 
-    &__logo {
-      &__img {
-        vertical-align: middle;
-        width: 3.75em; /*60px/16px*/
-        height: 3.5625em; /*57px/60px*/
-        margin-right: 1.625em; /*26px/16px*/
-      }
-      & h4 {
-        margin: 0;
-        padding: 0;
-        display: inline-block;
-        vertical-align: middle;
-        font-family: var(--titleFont);
-        font-size: 3.125em; /*50px/16px*/
-        line-height: 0.9892em; /*49.46px*/
-        font-weight: 400;
-      }
-    }
-
-    &__nav {
-      display: flex;
-      width: 27.375em; /*438px/16px*/
-      flex-flow: row nowrap;
-      justify-content: space-between;
-      align-items: center;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      &__item {
-        font-family: var(--paragraphFont);
-        font-size: 1.5625em; /*25px/16px*/;
-
-        &:first-child {
-          position: relative;
-
-          & a::before {
-            content: url(../assets/images/icon_donate.png);
-            display: block;
-            position: absolute;
-            top: 0.56em; /*14px/25px*/
-            left: -0.8em; /*20px/25px*/
-            width: 0.88em; /*22px/25px*/
-            height: 0.8em; /*20px/25px*/
-          }
-        }
-
-        & a {
-          display: block;
-          padding: 0.56em; /*14px/25px*/
-          color: var(--lightFontColor);
-          text-decoration: none;
-
-          &:hover {
-            cursor: pointer;
-          }
-        }
-
-        &:last-child a {
-          padding-right: 0;
-        }
-      }
-    }
+&__logo {
+&__img {
+   vertical-align: middle;
+ }
+& h4 {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: var(--titleFont);
+    font-size: 3.125em; /*50px/16px*/
+    margin: 0;
+    font-weight: 400;
   }
+}
+
+& nav {
+    width: 46.1538%;
+    padding-right: 40px;
+  }
+
+&__nav {
+   display: flex;
+   max-width: 39.375em; /*630px/16px*/
+   min-width: 350px;
+   flex-flow: row nowrap;
+   justify-content: space-between;
+   align-items: center;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+
+&__item {
+   font-family: var(--paragraphFont);
+   font-size: 1.5625em; /*25px/16px*/;
+
+& a {
+    display: block;
+    padding: 19px;
+  }
+}
+}
+}
+}
+.job{
+  width: 100%;
+  background-color: var(--themeWhiteColor);
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+/*align-items: center;*/
+& h2 {
+    font-family: var(--titleFont);
+    font-size: 3.125em; /*50px/16px*/
+    margin: 0;
+    font-weight: 400;
+  }
+& .bold{
+    font-family: var(--paragraphFont);
+    font-size: 1.5em;
+    margin: 0 0 1em;
+    font-weight: 600;
+  }
+& p {
+    font-family: var(--paragraphFont);
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: 400;
+  }
+&__paradiv {
+   width: 50%;
+   padding: 1em 1.5em 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+&__para {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   padding-bottom: 1.5em;
+&__desc{
+   text-align: right;
+   padding-right: 1.75em;
+ }
+}
+
+}
+&__imgdiv{
+   width: 50%;
+   display: flex;
+   justify-content: center;
+   padding: 1em;
+&__img{
+   width: 80%;
+ }
+}
+}
+
+footer{
+  width: 100%;
+  background-color: var(--themeDarkBlueColor);
+& .footer{
+&__icon{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+&__img{
+   width: 2.5rem;
+   height: auto;
+   padding: 1em 1.5em 1em;
+ }
+}
+}
+
 }
