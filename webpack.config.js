@@ -5,7 +5,7 @@ var path = require("path");
 module.exports = {
     entry: {
         index: "./app/javascript/index.js",
-        about: "./app/javascript/about.js",
+        volunteer_page: "./app/javascript/volunteer_page.js",
     },
     output: {
         // options related to how webpack emits results
@@ -68,9 +68,9 @@ module.exports = {
             chunks: ['index']
         }),
         new HtmlWebpackPlugin({
-            template: './app/templates/about.html',
-            filename: 'about.html',
-            chunks: ['about']
+            template: './app/templates/volunteer_page.html',
+            filename: 'volunteer_page.html',
+            chunks: ['volunteer_page']
         }),
 
     ],
