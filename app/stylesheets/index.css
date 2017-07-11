@@ -68,6 +68,9 @@ header {
         & a {
           display: block;
           padding: 0.56em; /*14px/25px*/
+          color: var(--lightFontColor);
+          text-decoration: none;
+
           &:hover {
             cursor: pointer;
           }
