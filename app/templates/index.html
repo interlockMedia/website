@@ -38,10 +38,41 @@
 
 <!--Mission Section-->
 <section class="mission">
-    <img class="mission__img" src="../assets/images/mission_statement_first_scene_background.jpg">
-    <p class="mission__text stroke">We could tell you “well, we warned you” about global warming. After all, for twenty
-        years we’ve churned out film on climate change and human rights.</p>
+    <input type="radio" name="radio-btn" id="switch-scene_1" checked/>
+    <article class="mission__scene mission__scene--showing">
+        <img class="mission__scene__img" src="../assets/images/mission_statement_first_scene_background.jpg">
+        <p class="mission__scene__text">We could tell you “well, we warned you” about global warming. After all,
+            for twenty
+            years we’ve churned out film on climate change and human rights.</p>
+    </article>
+    <input type="radio" name="radio-btn" id="switch-scene_2"/>
+    <article class="mission__scene">
+        <img class="mission__scene__img" src="../assets/images/mission_statement_second_scene_background.jpg">
+        <p class="mission__scene__text">But what good is “I told you so” on a burning planet?</p>
+    </article>
+    <input type="radio" name="radio-btn" id="switch-scene_3"/>
+    <article class="mission__scene">
+        <img class="mission__scene__img" src="../assets/images/mission_statement_third_scene_background.jpg">
+        <p class="mission__scene__text">At Interlock we’re all about combating climate change enlisting the very best of a filmmaker's craft.</p>
+    </article>
+    <input type="radio" name="radio-btn" id="switch-scene_4"/>
+    <article class="mission__scene">
+        <img class="mission__scene__img" src="../assets/images/mission_statement_final_scene_background.jpg">
+        <div class="mission__scene__text__block">
+            <p>We could tell you “well, we warned you” about global warming. After all, for twenty years we’ve churned out film on climate change and human rights.</p>
+            <p>But what good is “I told you so” on a burning planet?</p>
+            <p>At Interlock we’re all about combating climate change enlisting the very best of a filmmaker's craft.</p>
+        </div>
+    </article>
+
+    <div class="mission__switch">
+        <label for="switch-scene_1" ></label>
+        <label for="switch-scene_2" ></label>
+        <label for="switch-scene_3" ></label>
+        <label for="switch-scene_4" ></label>
+    </div>
 </section>
+
 
 <!--Featured Films Section-->
 <section class="featured-films">
