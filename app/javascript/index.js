@@ -1,19 +1,24 @@
 import '../stylesheets/index.css';
 import './common.js';
 
-(function () {
 
     class SliderManager {
         constructor() {
-            this.slides = [...document.querySelectorAll('.mission__scene')];
+            this.slides = Array.from(document.querySelectorAll('.mission__scene'));
             this.firstSlide = document.querySelector('.mission__scene--showing');
-            this.switches = document.querySelectorAll('.mission__switch label');
+            this.switches = document.querySelectorAll('.mission__switch span');
             this.intervals = [7000, 5000, 7000, 14000];
             this.checkedSwitchIndex = null;
             this.timeout = null;
 
+
+
             this.slides.forEach((slide, slideIndex) => {
-                slide.addEventListener('transitionend', () => this.changeSlide(slideIndex, this.intervals[slideIndex]))
+                slide.addEventListener('transitionend', () => {
+
+                    console.log(slide, slideIndex, this.slides,this.switches );
+                    this.changeSlide(slideIndex, this.intervals[slideIndex])
+                })
             });
 
             this.switches.forEach((s, switchIndex) => {
@@ -32,6 +37,7 @@ import './common.js';
         }
 
         showSlide(slideIndex) {
+            console.log(this.slides,this.switches,slideIndex );
             this.slides[slideIndex].classList.add('mission__scene--showing');
             this.switches[slideIndex].classList.add('checked');
         }
@@ -55,7 +61,6 @@ import './common.js';
 
         changeSlide(slideIndex, int) {
                 if (this.slides[slideIndex].classList.contains('mission__scene--showing')) {
-
                     this.timeout = setTimeout(() => {
                         this.hideSlide();
                     }, int)
@@ -67,5 +72,5 @@ import './common.js';
         }
     }
 
-    let sliderManager = new SliderManager();
-}());
+
+window.addEventListener('load', () => setTimeout(()=>new SliderManager(), 1000));
