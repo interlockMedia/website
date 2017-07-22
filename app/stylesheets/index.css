@@ -19,6 +19,11 @@ header {
     padding: 1.8125em; /*29px/16px*/
 
     &__logo {
+
+      & a {
+        text-decoration: none;
+      }
+
       &__img {
         vertical-align: middle;
         width: 3.75em; /*60px/16px*/
@@ -34,6 +39,7 @@ header {
         font-size: 3.125em; /*50px/16px*/
         line-height: 0.9892em; /*49.46px*/
         font-weight: 400;
+        color: var(--lightFontColor);
       }
     }
 
@@ -231,20 +237,19 @@ header {
 
   &__switch {
     position: absolute;
-    z-index: 100;
+    z-index: 10;
     bottom: 5em;
     left: 50%;
     transform: translateX(-50%);
-    //width:10em;
-    //height: 10em;
     text-align: center;
 
     & label {
       display: inline-block;
+      position:relative;
       width: 1em;
       height: 1em;
       border-radius: 50%;
-      border: 1px solid #000000;
+      border: 2px solid #000000;
       background-color: #ffffff;
       margin-right: 1.5em;
 
@@ -254,18 +259,25 @@ header {
 
       &:hover {
         cursor: pointer;
-        background-color: #fd926d;
+        width: 1.1em;
+        height: 1.1em;
+      }
+
+     &.checked:before {
+        content: '';
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 50%;
+        background-color: #000000;
+        z-index: 11;
       }
     }
-
   }
 
-  #switch-scene_1:checked ~ label[for = "switch-scene_1"],
-  #switch-scene_2:checked ~ label[for = "switch-scene_2"],
-  #switch-scene_3:checked ~ label[for = "switch-scene_3"],
-  #switch-scene_4:checked ~ label[for = "switch-scene_4"]{
-    background-color: #fd926d;
-  }
 }
 
 .featured-films {

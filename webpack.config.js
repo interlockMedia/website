@@ -6,6 +6,7 @@ module.exports = {
     entry: {
         index: "./app/javascript/index.js",
         volunteer_page: "./app/javascript/volunteer_page.js",
+        registration_page: "./app/javascript/registration_page.js"
     },
     output: {
         // options related to how webpack emits results
@@ -71,6 +72,11 @@ module.exports = {
             template: './app/templates/volunteer_page.html',
             filename: 'volunteer_page.html',
             chunks: ['volunteer_page']
+        }),
+        new HtmlWebpackPlugin({
+            template: './app/templates/registration_page.html',
+            filename: 'registration_page.html',
+            chunks: ['registration_page']
         }),
 
     ],
