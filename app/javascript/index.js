@@ -8,7 +8,7 @@ import './common.js';
             this.slides = [...document.querySelectorAll('.mission__scene')];
             this.firstSlide = document.querySelector('.mission__scene--showing');
             this.switches = document.querySelectorAll('.mission__switch label');
-            this.intervals = [4000, 3000, 4000, 5000];
+            this.intervals = [7000, 5000, 7000, 14000];
             this.checkedSwitchIndex = null;
             this.timeout = null;
 
