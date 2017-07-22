@@ -9,14 +9,16 @@
 <header>
     <div class="header container">
         <div class="header__logo">
+            <a href="#">
             <img class="header__logo__img" src="../assets/images/logo.png">
             <h4>Interlock Media</h4>
+            </a>
         </div>
         <nav>
             <ul class="header__nav">
                 <li class="header__nav__item"><a>Donate</a></li>
                 <li class="header__nav__item"><a href="volunteer_page.html">Volunteer</a></li>
-                <li class="header__nav__item"><a>Login | Registration</a></li>
+                <li class="header__nav__item"><a href="registration_page.html">Login | Registration</a></li>
             </ul>
         </nav>
     </div>
@@ -38,10 +40,45 @@
 
 <!--Mission Section-->
 <section class="mission">
-    <img class="mission__img" src="../assets/images/mission_statement_first_scene_background.jpg">
-    <p class="mission__text stroke">We could tell you “well, we warned you” about global warming. After all, for twenty
-        years we’ve churned out film on climate change and human rights.</p>
+
+    <article class="mission__scene mission__scene--showing">
+        <img class="mission__scene__img" src="../assets/images/mission_statement_first_scene_background.jpg">
+        <p class="mission__scene__text">We could tell you “well, we warned you” about global warming. After all,
+            for twenty
+            years we’ve churned out film on climate change and human rights.</p>
+    </article>
+
+    <article class="mission__scene">
+        <img class="mission__scene__img" src="../assets/images/mission_statement_second_scene_background.jpg">
+        <p class="mission__scene__text">But what good is “I told you so” on a burning planet?</p>
+    </article>
+
+    <article class="mission__scene">
+        <img class="mission__scene__img" src="../assets/images/mission_statement_third_scene_background.jpg">
+        <p class="mission__scene__text">At Interlock we’re all about combating climate change enlisting the very best of a filmmaker's craft.</p>
+    </article>
+
+    <article class="mission__scene">
+        <img class="mission__scene__img" src="../assets/images/mission_statement_final_scene_background.jpg">
+        <div class="mission__scene__text__block">
+            <p>We could tell you “well, we warned you” about global warming. After all, for twenty years we’ve churned out film on climate change and human rights.</p>
+            <p>But what good is “I told you so” on a burning planet?</p>
+            <p>At Interlock we’re all about combating climate change enlisting the very best of a filmmaker's craft.</p>
+        </div>
+    </article>
+
+    <div class="mission__switch">
+        <input type="radio" name="radio-btn" id="switch-scene_1" checked/>
+        <label for="switch-scene_1" class="checked"></label>
+        <input type="radio" name="radio-btn" id="switch-scene_2"/>
+        <label for="switch-scene_2"></label>
+        <input type="radio" name="radio-btn" id="switch-scene_3"/>
+        <label for="switch-scene_3"></label>
+        <input type="radio" name="radio-btn" id="switch-scene_4"/>
+        <label for="switch-scene_4"></label>
+    </div>
 </section>
+
 
 <!--Featured Films Section-->
 <section class="featured-films">
