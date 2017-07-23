@@ -41,6 +41,11 @@ header {
         font-weight: 400;
         color: var(--lightFontColor);
       }
+
+      &:hover {
+        cursor: pointer;
+        filter: drop-shadow(0 0 1px #fff);
+      }
     }
 
     &__nav {
@@ -79,6 +84,7 @@ header {
 
           &:hover {
             cursor: pointer;
+            text-shadow: 0 0 1px, 0 0 2px;
           }
         }
 
@@ -108,6 +114,9 @@ footer {
         width: 2.5rem;
         height: auto;
         padding: 1em 1.5em 1em;
+        &:hover {
+          filter: drop-shadow(0 0 1px #fff);
+        }
       }
     }
   }
