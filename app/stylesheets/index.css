@@ -41,6 +41,11 @@ header {
         font-weight: 400;
         color: var(--lightFontColor);
       }
+
+      &:hover {
+        cursor: pointer;
+        filter: drop-shadow(0 0 1px #fff);
+      }
     }
 
     &__nav {
@@ -77,8 +82,10 @@ header {
           color: var(--lightFontColor);
           text-decoration: none;
 
+
           &:hover {
             cursor: pointer;
+            text-shadow: 0 0 1px, 0 0 2px;
           }
         }
 
@@ -87,6 +94,30 @@ header {
         }
       }
     }
+  }
+}
+
+@keyframes fadeAndScale {
+  0% {
+    opacity: 0;
+    filter: drop-shadow(0 0 0 #fff);
+  }
+
+  45% {
+    filter: drop-shadow(0 0 0 #fff);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 7px #fff);
+  }
+
+  70% {
+    filter: drop-shadow(0 0 0 #fff);
+  }
+
+  100% {
+    opacity: 1;
+
   }
 }
 
@@ -112,11 +143,17 @@ header {
     transform: translate(-50%, -50%);
     color: var(--lightFontColor);
     text-align: center;
+    animation-duration: 5s;
+    animation-name: fadeAndScale;
+    animation-timing-function: ease;
 
     &__logo {
       width: 17.0625em; /*273px/16px*/
       height: 16.1875em; /*259px/16px*/
       margin-bottom: 2.875em; /*46px/16px*/
+
+      /*box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0.35);*/
+
     }
 
     & h1 {
@@ -127,8 +164,13 @@ header {
       margin: 0;
       padding: 0;
       text-shadow: 0px 3px 7px rgba(0, 0, 0, 1);
+
     }
+
+
   }
+
+
 }
 
 .maxim {
@@ -513,6 +555,10 @@ footer {
         width: 2.5rem;
         height: auto;
         padding: 1em 1.5em 1em;
+
+        &:hover {
+            filter: drop-shadow(0 0 1px #fff);
+        }
       }
     }
   }
