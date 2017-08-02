@@ -160,6 +160,217 @@ header {
 }
 }
 
+/* The Modal Window */
+.modal {
+    display: none; /* Hidden by default */
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 4em;
+& p{
+      margin: 0;
+      padding-top: 1em;
+      display: inline-block;
+      text-align: center;
+      font-size: 1em;
+      font-family: var(--paragraphFontItalic);
+      line-height: 0.9892em; /*49.46px*/
+      font-weight: 600;
+      color: var(--darkFontColor);
+  }
+&__content{
+     background-color: var(--themeWhiteColor);
+     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+     border: 0.3em solid #888;
+     width: 50%; /* Could be more or less, depending on screen size */
+&__close {
+     position: absolute;
+     right: 25px;
+     top: 0;
+     color: var(--darkFontColor);
+     font-size: 3.125em;
+     font-weight: bold;
+&:hover, &:focus{
+              color: var(--themeGreenColor);
+              cursor: pointer;
+          }
+}
+}
+
+& .submitbtn {
+      background-color: var(--themeWhiteColor);
+      padding-top: 2em;
+      color: white;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+&:hover{
+     opacity: 0.8;
+ }
+}
+
+& .imgcontainer {
+      text-align: center;
+      position: relative;
+      padding-top: 2em;
+      padding-bottom: 2em;
+& span.psw {
+      float: right;
+      padding-top: 4em;
+  }
+&__paypal__logo{
+     width: 100%;
+     display: inline;
+ }
+}
+
+& .container {
+      padding-left: 2em;
+      padding-right: 2em;
+
+& .donate-now{
+      list-style-type:none;
+      padding:0;
+
+& li {
+      display: inline-block;
+      margin:1em 1em 0 0;
+      width:7.5em;
+      height:3em;
+      position:relative;
+      text-align: center;
+  }
+
+& label{
+      display:block;
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      padding: 1em;
+      border:none;
+      background-color: var(--themeGreenColor);
+      color: white;
+      cursor:pointer;
+      z-index:90;
+  }
+& label:hover {
+      background:var(--themeDarkBlueColor);
+  }
+
+& input{
+      display:block;
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+  }
+
+& input[type="radio"] {
+      opacity:0.011;
+      z-index:100;
+  }
+
+& input[type="radio"]:checked + label {
+      background:var(--themeRedColor);
+  }
+}
+
+/* Full-width input fields */
+& input[type=number] {
+      width: 100%;
+      padding: 1em 1em;
+      display: inline-block;
+      border: 0.1em solid var(--greyFontColor);
+      box-sizing: border-box;
+  }
+
+
+&__cancel{
+     background-color: var(--themeLightBlueColor);
+     display: inline-block;
+     width: 100%;
+&__cancelbtn{
+     width: auto;
+     padding: 0.5em 1.5em;
+     float: right;
+     border: none;
+     cursor: pointer;
+     color: white;
+     background-color: var(--themeGreenColor);
+     margin: 1em;
+&:hover{
+     opacity: 0.8;
+ }
+}
+}
+
+& h2{
+      margin: 0;
+      padding: 0;
+      display: block;
+      vertical-align: middle;
+      font-family: var(--titleFont);
+      font-size: 2.75em;
+      line-height: 0.9892em; /*49.46px*/
+      font-weight: 500;
+      color: var(--themeDarkBlueColor);
+  }
+
+& h4{
+      margin: 0;
+      padding-top: 1em;
+      display: inline-block;
+      vertical-align: middle;
+      font-family: var(--titleFont);
+      font-size: 1.5em; /*50px/16px*/
+      line-height: 0.9892em; /*49.46px*/
+      font-weight: 500;
+      color: var(--themeDarkBlueColor);
+  }
+}
+
+}
+
+/* Add Modal Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    modal__content__close {
+        display: block;
+        float: none;
+    }
+    .container__cancel__cancelbtn {
+        width: 100%;
+    }
+}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
 footer {
     width: 100%;
     background-color: var(--themeDarkBlueColor);

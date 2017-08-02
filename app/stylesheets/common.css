@@ -49,6 +49,7 @@ body {
   /*variables for font colors*/
   --lightFontColor: #ffffff;
   --darkFontColor: #10222b;
+  --greyFontColor: #ccc;
 
   /*dimension variables*/
   --maxSectionWidth: 1365px;

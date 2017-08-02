@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <title>Interlock Media</title>
 </head>
 <body>
@@ -16,13 +17,92 @@
         </div>
         <nav>
             <ul class="header__nav">
-                <li class="header__nav__item"><a>Donate</a></li>
+                <li class="header__nav__item"><a onclick="document.getElementById('id01').style.display='flex'" style="width:auto;">Donate</a></li>
                 <li class="header__nav__item"><a href="#">Volunteer</a></li>
                 <li class="header__nav__item"><a href="registration_page.html">Login | Registration</a></li>
             </ul>
         </nav>
     </div>
 </header>
+<!--donate modal window-->
+<div id="id01" class="modal">
+    <form class="modal__content animate" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="bookkeeper.interlock@gmail.com">
+        <input type="hidden" name="item_name" value="Interlock Media">
+        <input type="hidden" name="amount" value="amount">
+        <input type="hidden" name="no_shipping" value="1">
+        <input type="hidden" name="no_note" value="1">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="tax" value="0">
+        <input type="hidden" name="bn" value="PP-DonationsBF">
+        <input id="type" type="hidden" name="expType" value="mini">
+
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="modal__content__close" title="Close">&times;</span>
+        </div>
+        <div class="container">
+            <h2>Give to Interlock Media</h2>
+            <p>By supporting film and media works on climate justice, you bolster the rights of indigenous peoples and
+                religious understanding. Your contributions also help train the next generation of progressive media makers.</p>
+        </div>
+        <div class="container">
+            <label><h4>Make a Secure Online Gift</h4></label>
+            <ul class="donate-now">
+                <li>
+                    <input type="radio" id="a25" name="amount" value="25"/>
+                    <label for="a25">$25</label>
+                </li>
+                <li>
+                    <input type="radio" id="a50" name="amount" value="50"/>
+                    <label for="a50">$50</label>
+                </li>
+                <li>
+                    <input type="radio" id="a75" name="amount" value="75" />
+                    <label for="a75">$75</label>
+                </li>
+                <li>
+                    <input type="radio" id="a100" name="amount" value="100"/>
+                    <label for="a100">$100</label>
+                </li>
+                <li>
+                    <input type="radio" id="a200" name="amount" value="200" />
+                    <label for="a200">$200</label>
+                </li>
+                <li>
+                    <input type="radio" id="a500" name="amount" value="500"/>
+                    <label for="a500">$500</label>
+                </li>
+                <li>
+                    <input type="radio" id="a1000" name="amount" value="1000"/>
+                    <label for="a1000">$1000</label>
+                </li>
+                <li>
+                    <input type="radio" id="a2000" name="amount" value="2000"/>
+                    <label for="a2000">$2000</label>
+                </li>
+            </ul>
+            <label>
+                <input type="number" name="amount" class="text" title="Other Amount" placeholder="Other: $0.00" id="myMessage"></label>
+
+            <button class="submitbtn" type="submit"><img src="../assets/images/PaypalDonate.png" /></button>
+            <div class="imgcontainer">
+                <img class="imgcontainer__paypal__logo" alt="paypal" border="0" src="../assets/images/paypal_logo.jpg">
+                <p>Your donation will not be submitted until you have had a chance to confirm your details and click through the PayPal
+                    screens that follow.Tax Identification Number (also known as Employee Identification Number or EIN) is
+                    04 3196-958.and we are a 501(c-3) organization. Your donations are tax-deductible to the maximum extent of the law,
+                    and your contribution will be acknowledged so that you will have a receipt for filing</p>
+            </div>
+        </div>
+
+        <div class="container__cancel">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="container__cancel__cancelbtn">Cancel</button>
+        </div>
+    </form>
+
+</div>
+
+<!--Job Posting Section-->
 <section class="job themewhite top">
     <div class="job__paradiv">
         <h2>Job Title</h2>
