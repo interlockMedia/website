@@ -86,7 +86,6 @@ class SliderManager {
     }
 }
 
-
 window.addEventListener('load', () => setTimeout(() => new SliderManager(), 1000));
 
 class VideoManager {
