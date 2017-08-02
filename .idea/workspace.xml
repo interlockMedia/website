@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc203806-9c6c-4971-bfab-6577969778b8" name="Default" comment="Index page with working featured films section">
+    <list default="true" id="bc203806-9c6c-4971-bfab-6577969778b8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/javascript/index.js" afterPath="$PROJECT_DIR$/app/javascript/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/index.html" afterPath="$PROJECT_DIR$/app/templates/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -406,7 +404,7 @@
       <workItem from="1501370714324" duration="23000" />
       <workItem from="1501370783918" duration="5495000" />
       <workItem from="1501438268322" duration="13767000" />
-      <workItem from="1501608298021" duration="22530000" />
+      <workItem from="1501608298021" duration="22537000" />
     </task>
     <task id="LOCAL-00001" summary="Development environment setup">
       <created>1498273585582</created>
@@ -555,11 +553,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501641176033</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Index page with working featured films section">
+      <created>1501642110522</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1501642110522</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196275000" />
+    <option name="totallyTimeSpent" value="196282000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
