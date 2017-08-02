@@ -67,3 +67,7 @@ body {
   max-width: var(--maxSectionWidth);
   margin: 0 auto;
 }
+
+.hide {
+  display: none;
+}

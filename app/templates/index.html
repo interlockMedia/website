@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <title>Interlock Media</title>
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" display="none">
+    <symbol id="show-more-btn" viewBox="3 0 10 28">
+        <path d="M9.297 15c0 0.125-0.063 0.266-0.156 0.359l-7.281 7.281c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-0.781-0.781c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l6.141-6.141-6.141-6.141c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l0.781-0.781c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l7.281 7.281c0.094 0.094 0.156 0.234 0.156 0.359zM15.297 15c0 0.125-0.063 0.266-0.156 0.359l-7.281 7.281c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-0.781-0.781c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l6.141-6.141-6.141-6.141c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l0.781-0.781c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l7.281 7.281c0.094 0.094 0.156 0.234 0.156 0.359z" fill="#FFFFFF"></path>
+    </symbol>
+    <symbol id="show-less-btn" viewBox="3 0 10 28">
+        <path d="M9.797 21.5c0 0.125-0.063 0.266-0.156 0.359l-0.781 0.781c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-7.281-7.281c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l7.281-7.281c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l0.781 0.781c0.094 0.094 0.156 0.234 0.156 0.359s-0.063 0.266-0.156 0.359l-6.141 6.141 6.141 6.141c0.094 0.094 0.156 0.234 0.156 0.359zM15.797 21.5c0 0.125-0.063 0.266-0.156 0.359l-0.781 0.781c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-7.281-7.281c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l7.281-7.281c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l0.781 0.781c0.094 0.094 0.156 0.234 0.156 0.359s-0.063 0.266-0.156 0.359l-6.141 6.141 6.141 6.141c0.094 0.094 0.156 0.234 0.156 0.359z" fill="#FFFFFF"></path>
+    </symbol>
+</svg>
 <header>
     <div class="header container">
         <div class="header__logo">
             <a href="#">
-            <img class="header__logo__img" src="../assets/images/logo.png">
-            <h4>Interlock Media</h4>
+                <img class="header__logo__img" src="../assets/images/logo.png">
+                <h4>Interlock Media</h4>
             </a>
         </div>
         <nav>
@@ -135,13 +142,15 @@
 
     <article class="mission__scene">
         <img class="mission__scene__img" src="../assets/images/mission_statement_third_scene_background.jpg">
-        <p class="mission__scene__text">At Interlock we’re all about combating climate change enlisting the very best of a filmmaker's craft.</p>
+        <p class="mission__scene__text">At Interlock we’re all about combating climate change enlisting the very best of
+            a filmmaker's craft.</p>
     </article>
 
     <article class="mission__scene">
         <img class="mission__scene__img" src="../assets/images/mission_statement_final_scene_background.jpg">
         <div class="mission__scene__text__block">
-            <p>We could tell you “well, we warned you” about global warming. After all, for twenty years we’ve churned out film on climate change and human rights.</p>
+            <p>We could tell you “well, we warned you” about global warming. After all, for twenty years we’ve churned
+                out film on climate change and human rights.</p>
             <p>But what good is “I told you so” on a burning planet?</p>
             <p>At Interlock we’re all about combating climate change enlisting the very best of a filmmaker's craft.</p>
         </div>
@@ -157,24 +166,78 @@
 
 
 <!--Featured Films Section-->
+<div class="featured-films__divider"></div>
 <section class="featured-films">
-    <article>
-        <img src="../assets/images/featured_film_background.jpg">
+    <div class="container">
+        <div class="featured-films__details-btn">
+            <svg class="show-more-btn">
+                <use xlink:href="#show-more-btn"></use>
+            </svg>
+            <svg class="show-less-btn">
+                <use xlink:href="#show-less-btn"></use>
+            </svg>
+        </div>
+    <article class="featured-films--showing">
+        <div class="featured-films__video-container">
+        </div>
+        <img class="featured-films__img" src="../assets/images/featured_film_background_1.jpg">
+        <span class="featured-films__play_btn" data-playVideo="0"></span>
         <div class="featured-films__description">
-            <h2 class="featured-films__description__heading">Vivamus id Leo Tempus</h2>
-            <p class="featured-films__description__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Integer eleifend nunc tortor, eu cursus sem tempor vitae. Integer feugiat, justo.</p>
-            <p class="featured-films__description__year">[year]</p>
-            <div class="featured-films__description__links">
-                <a class="featured-films__description__links__play">Play Trailer</a>
-                <a class="featured-films__description__links__purchase">Purchase</a>
-            </div>
+            <h2 class="featured-films__description__heading">Is the Climate Fight Over?</h2>
+            <p class="featured-films__description__text">Climate Media Engine met with author Wen Stephenson as he
+                ponders the notion of why the “climate fight as we know it is over.” </p>
+            <p class="featured-films__description__year">[2017]</p>
+            <!--<div class="featured-films__description__links">-->
+            <!--<a class="featured-films__description__links__play">Play Trailer</a>-->
+            <!--<a class="featured-films__description__links__purchase">Purchase</a>-->
+            <!--</div>-->
             <div class="featured-films__description__nav">
-                <a><span> < </span>previous</a>
-                <a>next<span> > </span></a>
+                <a data-video-index="2"><span> < </span>previous</a>
+                <a data-video-index="1">next<span> > </span></a>
             </div>
         </div>
     </article>
+    <article>
+        <div class="featured-films__video-container">
+        </div>
+        <img class="featured-films__img" src="../assets/images/featured_film_background_2.jpg">
+        <span class="featured-films__play_btn" data-playVideo="1"></span>
+        <div class="featured-films__description">
+            <h2 class="featured-films__description__heading">POC21 - Makers</h2>
+            <p class="featured-films__description__text">This segment gathers information about POC21, an international
+                innovation community that wants to better the planet by creating sustainable products.</p>
+            <p class="featured-films__description__year">[2016]</p>
+            <!--<div class="featured-films__description__links">-->
+            <!--<a class="featured-films__description__links__play">Play Trailer</a>-->
+            <!--<a class="featured-films__description__links__purchase">Purchase</a>-->
+            <!--</div>-->
+            <div class="featured-films__description__nav">
+                <a data-video-index="0"><span> < </span>previous</a>
+                <a data-video-index="2">next<span> > </span></a>
+            </div>
+        </div>
+    </article>
+    <article>
+        <div class="featured-films__video-container">
+        </div>
+        <img class="featured-films__img" src="../assets/images/featured_film_background_3.jpg">
+        <span class="featured-films__play_btn" data-playVideo="2"></span>
+        <div class="featured-films__description">
+            <h2 class="featured-films__description__heading">COP21 - German Alternative View</h2>
+            <p class="featured-films__description__text">This segment takes place during COP21, the 2015 international
+                meeting in Paris to set global climate impact standards.</p>
+            <p class="featured-films__description__year">[2016]</p>
+            <!--<div class="featured-films__description__links">-->
+            <!--<a class="featured-films__description__links__play">Play Trailer</a>-->
+            <!--<a class="featured-films__description__links__purchase">Purchase</a>-->
+            <!--</div>-->
+            <div class="featured-films__description__nav">
+                <a data-video-index="1"><span> < </span>previous</a>
+                <a data-video-index="0">next<span> > </span></a>
+            </div>
+        </div>
+    </article>
+    </div>
 </section>
 
 <!--Contributors Section-->
@@ -194,17 +257,18 @@
     <div class="getInv__div">
         <div class="getInv__div__item">
             <h3>DONATE</h3>
-            <P>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                et ea rebum. Stet clita kasd gubergren,</P><br>
+            <p>By supporting film and media works on climate justice, you bolster the rights of indigenous peoples and
+                religious understanding. Your contributions also help train the next generation of progressive media
+                makers.</p><br>
 
             <button class="getInv__div__item__donatebtn">Donate</button>
         </div>
         <div class="getInv__div__item">
             <h3>VOLUNTEER</h3>
-            <P>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                et ea rebum. Stet clita kasd gubergren,</P><br>
+            <p> People of all backgrounds, age groups, and levels of experience are encouraged to apply. Interlock
+                especially welcomes individuals with background or interests in filmmaking, radio, anthropology,
+                environmental sciences, arts and business administration, and international development studies.
+            </p><br>
             <button class="getInv__div__item__learnMorebtn">Learn More</button>
         </div>
     </div>
@@ -220,5 +284,6 @@
         </div>
     </div>
 </footer>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </body>
 </html>
