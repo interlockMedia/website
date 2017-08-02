@@ -7,7 +7,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 100;
   box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
 
   & .header {
@@ -539,55 +539,111 @@ header {
   position: relative;
   font-size: 1rem;
 
-  &::before {
-    content: '';
-    display: block;
+  & .container {
+    position: relative;
+  }
+
+  & .show-more-btn, & .show-less-btn {
     position: absolute;
-    top: 0;
-    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    left:-80px;
+    top:50%;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 5;
+    transition: all 0.5s ease;
+  }
+
+  & .featured-films__details-btn--show {
+    visibility:visible;
+    opacity: 1;
+  }
+
+ &__divider {
     width: 100%;
     height: 25px;
     background-color: var(--themeDarkBlueColor);
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
-    z-index: 2;
   }
 
   & article {
+    display: none;
     max-width: var(--maxSectionWidth);
     margin: 0 auto;
     position: relative;
 
-    &::before {
-      content: url(../assets/images/play_button.png);
+
+    &.featured-films--showing {
       display: block;
+    }
+
+    & .featured-films__video-container {
+      display: none;
+      position: relative;
+      padding-bottom: 56.2634%;
+      /*padding-top: 35px;*/
+      height: 0;
+      overflow: hidden;
+
+      & .player .video-wrapper {
+        background: var(--themeDarkBlueColor) !important;
+      }
+
+      & iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    & .featured-films__img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    & .featured-films__play_btn {
+      display: block;
+      background-image:url(../assets/images/play_button.png);
       position: absolute;
       top: 50%;
-      right: 23.663%;/*323/1365*/
+      right: 23.663%; /*323/1365*/
       transform: translateY(-50%);
       width: 48px;
       height: 80px;
       z-index: 3;
-    }
 
-    & img {
-      display: block;
-      width: 100%;
-      height: auto;
-     }
+      &:hover {
+          cursor: pointer;
+          filter: drop-shadow(0 0 1px #fff);
+      }
+    }
 
     & .featured-films__description {
       position: absolute;
-      top: 25px;
+      top: 0;
       left: 50px;
       width: 42%; /*560px/1366px*/
-      height: calc(100% - 25px);
+      height: 100%;
       background-color: var(--themeDarkBlueColor);
       opacity: 0.85;
       z-index: 10;
       color: var(--lightFontColor);
       padding: 2.375em; /*38px/16px*/
+      padding-top: 3.9375em;/*38+25/16*/
       box-sizing: border-box;
       font-size: 1rem;
+      transition: all 1s ease;
+
+      &--slide-left {
+        left:-1000px;
+      /*transform: translateX(calc(-100% - 50px))*/
+      }
 
       &__heading {
         font-family: var(--paragraphFontBold);
@@ -626,7 +682,7 @@ header {
         & a {
           padding: 0.3em 0; /*10px/33.333px*/
           &:hover {
-            cursor: pointer;
+              cursor: pointer;
           }
         }
       }
@@ -648,6 +704,7 @@ header {
           padding: 0.26666em; /*10px/37.5px*/
           &:hover {
             cursor: pointer;
+            text-shadow: 0 0 1px, 0 0 2px;
           }
           & span {
             font-family: var(--paragraphFontBold);
