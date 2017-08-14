@@ -717,28 +717,80 @@ header {
 }
 
 .contributors {
-  padding-top: 3em;
-  padding-bottom: 3em;
+  padding-top: 6em;
+  padding-bottom: 4em;
   width: 100%;
   background-color: var(--themeWhiteColor);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+ & .tab {
+    width: 80%;
+    margin-top: 3em;
+    background-color: var(--themeLightBlueColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &__tablinks{
+     flex-grow: 1;
+    }
+    & .activebtn{
+      background-color: var(--themeGreenColor);
+      color: white;
+    }
+    & button {
+          border: none;
+          outline: none;
+          margin: 0;
+          transition: 0.3s;
+          font-size: 1.75em;
+          font-family: var(--titleFont);
+          cursor: pointer;
+          color: var(--themeGreenColor);
+          background-color: var(--themeLightBlueColor);
+          padding: 0.7em 1.5em;
+        &:hover{
+             background-color: var(--themeDarkBlueColor);
+             color: white;
+         }
+}
+}
+
+    & .tabcontent {
+        display: block;
+        -webkit-animation: fadeEffect 1s;
+        animation: fadeEffect 1s;
+    }
+
   & h2 {
     font-family: var(--titleFont);
     font-size: 3.125em; /*50px/16px*/
     margin: 0;
     font-weight: 400;
   }
+
   &__imgdiv {
     display: flex;
     justify-content: center; /* align horizontal */
     &__img {
-      width: 100%;
-      height: auto;
+      width: 80%;
+      height: 80%;
+      padding-top: 1em;
     }
   }
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 .getInv {
@@ -777,11 +829,12 @@ header {
     display: flex;
     flex-direction: row;
     &__item {
+     width: 50%;
       padding: 3em 3em 0em 3em;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+     /*justify_content: center;*/
 
       & p {
         padding-top: 1em;

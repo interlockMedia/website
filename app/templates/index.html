@@ -244,11 +244,46 @@
 <section class="contributors">
 
     <h2>CONTRIBUTORS</h2>
-    <div class="contributors__imgdiv">
-        <img class="contributors__imgdiv__img" src="../assets/images/contributors.jpg" alt="contributors">
+    <div class="tab">
+        <button class="tab__tablinks activebtn" onclick="openContributorsTab(event, 'Foundation')">Foundation Support</button>
+        <button class="tab__tablinks" onclick="openContributorsTab(event, 'Corporate')">Corporate Support</button>
+        <button class="tab__tablinks" onclick="openContributorsTab(event, 'Community')">Community Sponsors</button>
+    </div>
+
+    <div id="Foundation" class="tabcontent">
+        <div class="contributors__imgdiv">
+            <img class="contributors__imgdiv__img" src="../assets/images/foundation_support.png" alt="contributors">
+        </div>
+    </div>
+
+    <div id="Corporate" class="tabcontent" style="display: none;">
+        <div class="contributors__imgdiv">
+            <img class="contributors__imgdiv__img" src="../assets/images/corporate_support.png" alt="contributors">
+        </div>
+    </div>
+
+    <div id="Community" class="tabcontent" style="display: none;">
+        <div class="contributors__imgdiv">
+            <img class="contributors__imgdiv__img" src="../assets/images/community_support.png" alt="contributors">
+        </div>
     </div>
 
 </section>
+<script>
+    function openContributorsTab(evt, cName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab__tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" activebtn", "");
+        }
+        document.getElementById(cName).style.display = "block";
+        evt.currentTarget.className += " activebtn";
+    }
+</script>
 
 <!--Get Involved Section-->
 <section class="getInv">
